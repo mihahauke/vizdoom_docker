@@ -42,11 +42,11 @@ RUN apt-get update && apt-get install -y \
     python3-pip
 
 
-RUN pip install pip --upgrade
+RUN pip2 install pip --upgrade
 RUN pip3 install pip --upgrade
 
 # Vizdoom and other pip packages if needed
-RUN pip --no-cache-dir install \
+RUN pip2 --no-cache-dir install \
     vizdoom==1.1.6
 
 RUN pip3 --no-cache-dir install \
